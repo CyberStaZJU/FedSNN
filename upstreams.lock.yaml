@@ -1,0 +1,55 @@
+spikingjelly_npu:
+  repository: CyberStaZJU/SpikingJelly_npu
+  commit: 289c2ac82c759da0a01e7fd798972cb17f2f6e9b
+  archive_url: https://codeload.github.com/CyberStaZJU/SpikingJelly_npu/zip/289c2ac82c759da0a01e7fd798972cb17f2f6e9b
+  sha256: null
+  license: Apache-2.0
+  provenance: project_authoritative_npu_backend
+fedsnn:
+  repository: Intelligent-Computing-Lab-Panda/FedSNN
+  commit: 1ab26154b064119850bc9f84c55304b5b45f7df6
+  archive_url: https://codeload.github.com/Intelligent-Computing-Lab-Panda/FedSNN/zip/1ab26154b064119850bc9f84c55304b5b45f7df6
+  sha256: bddd62368fe7c62cad36eaa78bdd908ce2fc4155dc7136a6e3fe2e4cad371d05
+  license: MIT
+sfedhifi:
+  repository: rtao499/SFedHIFI
+  commit: 171bd060df10b9e1f60117d49a33952d5d172ab8
+  archive_url: https://codeload.github.com/rtao499/SFedHIFI/zip/171bd060df10b9e1f60117d49a33952d5d172ab8
+  sha256: 820b35c300e0887dd4a2778bb9c70a3dda0dba3f0e618e33d3f5a7dc5cca603f
+  license: unspecified
+flts_author_associated:
+  repository: manh-vnguyen/ParalelFedSNN
+  commit: 13e053ed583fcf93ab31a6749a03a0f7f6c83ae8
+  archive_url: https://codeload.github.com/manh-vnguyen/ParalelFedSNN/zip/13e053ed583fcf93ab31a6749a03a0f7f6c83ae8
+  sha256: 59d2558910cde9f38cef4f154a02df51d147d6a8331bedad76f0f780ce50758f
+  license: MIT
+  provenance: author_associated_not_paper_linked
+fedmos:
+  repository: Distributed-Learning-Networking-Group/FedMoS
+  commit: 4cc4525479603e980e10a6031cc15d1040cd7e76
+  archive_url: https://codeload.github.com/Distributed-Learning-Networking-Group/FedMoS/zip/4cc4525479603e980e10a6031cc15d1040cd7e76
+  sha256: 086c2e4063d01f45d455dc6bdb6ba8514141d3412342a01e15fc7c135132f488
+  license: unspecified
+  provenance: author_official_repository
+fedlec:
+  repository: alliethebanana/FedLEC
+  commit: 60cc69de28a31c9b64e14ee61f7894ae5167c9b1
+  archive_url: https://codeload.github.com/alliethebanana/FedLEC/zip/60cc69de28a31c9b64e14ee61f7894ae5167c9b1
+  sha256: 3508ba906487a0c430ccb2c403338ef4c3383849201a4cc092a435bd53a8b5c6
+  license: Apache-2.0
+  provenance: official_repository
+fedsnn_qc:
+  repository: null
+  commit: null
+  archive_url: null
+  sha256: null
+  license: not_applicable
+  provenance: no_official_code_located
+  fetchable: false
+divfl:
+  repository: melodi-lab/divfl
+  commit: 4a5b80df85a72b97751ce1130ee5c7d76a2c1540
+  archive_url: https://codeload.github.com/melodi-lab/divfl/zip/4a5b80df85a72b97751ce1130ee5c7d76a2c1540
+  sha256: de3399869b5e18035d14fb2041ae4cf96c65f7cd3e29c95282c42641ef7ea0eb
+  license: MIT
+  provenance: author_paper_repository

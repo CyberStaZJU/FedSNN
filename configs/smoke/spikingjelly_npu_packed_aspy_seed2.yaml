@@ -1,0 +1,76 @@
+paper:
+  method: symmetric_block_dual_topk_ef_snn
+  title: SMOKE exact AsPy decay-LIF AlexNet qualification
+  fidelity: spikingjelly_npu_packed_aspy_canary
+
+dataset:
+  name: cifar10
+  partition: dir
+  alpha: 0.3
+
+federation:
+  mode: synchronous_topk
+  clients: 50
+  candidate_clients: 10
+  aggregation_clients: 10
+  selected_clients: 10
+  dense_upload_equivalents: 12.0
+
+model:
+  name: fedsnn_alexnet_bntt
+  neuron: if
+  timesteps: 4
+  threshold: 1.0
+  reset: 0.0
+  membrane_decay: 0.95
+  normalization: bntt
+  bias: false
+  pooling: avg
+  surrogate_beta: 2.0
+  input_encoding: poisson
+  initialization: pytorch_layer_default
+  output: spike_count
+  execution_backend: packed_aspy
+  execution_backend_strict: true
+
+training:
+  rounds: 2
+  local_epochs: 5
+  batch_size: 128
+  optimizer: sgd
+  learning_rate: 0.05
+  momentum: 0.0
+  weight_decay: 0.0
+  global_step_size: 1.0
+  checkpoint_every: 20
+  seed: 2
+  state_storage: accelerator
+
+compression:
+  method: global_magnitude_topk
+  allocation: equal
+  value_bits: 32
+  error_feedback: false
+  bntt_affine_upload: dense
+  bntt_buffer_upload: dense
+  normalization_dense_cost_in_budget: true
+  ranking_score: raw_global_magnitude
+  linear_block_size: 16
+  uplink_topk_ratio: 0.1
+
+downlink:
+  downlink_compression: true
+  downlink_topk_ratio: 0.1
+  downlink_credit_mode: none
+  downlink_credit_temp: 1.0
+  downlink_ef: true
+
+output:
+  root: ../FedSNN_state/runs
+  track: smoke/cifar10/spikingjelly_npu_packed_aspy_20260730
+  method_name: symmetric_block_dual_topk_ef_10pct
+
+notes:
+  smoke: true
+  execution_backend_policy: packed_aspy_explicit_canary
+  unique_canary: '20260730'
